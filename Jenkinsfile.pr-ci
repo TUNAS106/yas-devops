@@ -65,6 +65,7 @@ pipeline {
           def changedJava = [] as Set
           def changedFrontend = [] as Set
 
+          env.BASE_COMMIT = baseCommit
           changedFiles.each { file ->
             def topFolder = file.tokenize('/')[0]
 
